@@ -1,0 +1,33 @@
+{
+  "name": "unit-testing",
+  "version": "1.0.0",
+  "description": "Testing is one of the most important factors in software development",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha src",
+    "coverage": "nyc --reporter=html npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OptimistLabyrinth/unit-testing-with-mocha-and-chai.git"
+  },
+  "keywords": [
+    "javascript",
+    "test",
+    "teseting",
+    "mocha",
+    "chai",
+    "sinon"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OptimistLabyrinth/unit-testing-with-mocha-and-chai/issues"
+  },
+  "homepage": "https://github.com/OptimistLabyrinth/unit-testing-with-mocha-and-chai#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "nyc": "^15.1.0"
+  }
+}
