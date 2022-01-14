@@ -4,6 +4,8 @@
   "description": "Testing is one of the most important factors in software development",
   "main": "index.js",
   "scripts": {
+    "server": "node src/rest-api.js",
+    "dev-server": "nodemon src/rest-api.js",
     "test": "mocha src",
     "coverage": "nyc --reporter=html npm test"
   },
@@ -26,11 +28,15 @@
   },
   "homepage": "https://github.com/OptimistLabyrinth/unit-testing-with-mocha-and-chai#readme",
   "dependencies": {
-    "axios": "^0.24.0"
+    "axios": "^0.24.0",
+    "express": "^4.17.2",
+    "joi": "^17.5.0"
   },
   "devDependencies": {
     "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "mocha": "^9.1.3",
+    "nodemon": "^2.0.15",
     "nyc": "^15.1.0",
     "sinon": "^12.0.1",
     "sinon-chai": "^3.7.0"
