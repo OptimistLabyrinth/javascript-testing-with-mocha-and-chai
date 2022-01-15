@@ -202,6 +202,31 @@ describe("Tasks API", function () {
         });
     });
 
+    it("should PATCH a task of specific id including completed property", function (done) {
+      const taskId = 1;
+      const task = {
+        name: "Task 1 patched successfully",
+        completed: true,
+      };
+      chai
+        .request(server)
+        .patch(`/api/tasks/${taskId}`)
+        .send(task)
+        .end(function (error, response) {
+          expect(response).to.have.status(200);
+          expect(response.body).to.be.a("object");
+          expect(response.body).to.have.property("id");
+          expect(response.body).to.have.property("name");
+          expect(response.body).to.have.property("completed");
+          expect(response.body).to.have.property("id").to.be.eq(1);
+          expect(response.body).to.have.property("completed").to.be.eq(true);
+          expect(response.body)
+            .to.have.property("name")
+            .to.be.eq("Task 1 patched successfully");
+          done();
+        });
+    });
+
     it(
       "failed to PATCH a task of specific id " +
         "because the name is less than 3 characters",
