@@ -6,8 +6,6 @@ const expect = chai.expect;
 chai.use(chaiHttp);
 
 describe("Tasks API", function () {
-  // const serverDomain = "http://localhost:4000";
-
   // * GET
   describe("GET /api/tasks", function () {
     it("should GET all the tasks", function (done) {
