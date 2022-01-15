@@ -22,12 +22,12 @@ const tasks = [
     }
 ];
 
-// GET
+// * GET
 app.get("/api/tasks" , (request, response) => {
     response.send(tasks);
 });
 
-// GET (BY ID)
+// * GET (BY ID)
 app.get("/api/tasks/:id" , (request, response) => {
     const taskId = request.params.id;
     const task = tasks.find(task => task.id === parseInt(taskId));
@@ -35,7 +35,7 @@ app.get("/api/tasks/:id" , (request, response) => {
     response.send(task);
 });
 
-// POST
+// * POST
 app.post("/api/tasks", (request, response) => {
     const { error } = utils.validateTask(request.body);
 
@@ -51,7 +51,7 @@ app.post("/api/tasks", (request, response) => {
     response.status(201).send(task);
 });
 
-//PUT
+// * PUT
 app.put("/api/tasks/:id", (request, response) => {
     const taskId = request.params.id;
     const task = tasks.find(task => task.id === parseInt(taskId));
@@ -69,7 +69,7 @@ app.put("/api/tasks/:id", (request, response) => {
 
 
 
-//PATCH
+// * PATCH
 app.patch("/api/tasks/:id", (request, response) => {
     const taskId = request.params.id;
     const task = tasks.find(task => task.id === parseInt(taskId));
@@ -87,7 +87,7 @@ app.patch("/api/tasks/:id", (request, response) => {
     response.send(task);
 });
 
-//DELETE
+// * DELETE
 app.delete("/api/tasks/:id", (request, response) => {
     const taskId = request.params.id;
     const task = tasks.find(task => task.id === parseInt(taskId));
