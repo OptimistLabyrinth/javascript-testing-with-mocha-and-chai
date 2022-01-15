@@ -1,5 +1,5 @@
 const assert = require("chai").assert;
-const app = require("./app");
+const app = require("../src/app");
 
 describe("functions 'add' in App", function () {
   it("should add 2 numbers together", function () {

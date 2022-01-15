@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node src/rest-api.js",
     "dev-server": "nodemon src/rest-api.js",
-    "test": "mocha src",
+    "test": "mocha",
     "coverage": "nyc --reporter=html npm test"
   },
   "repository": {

@@ -1,4 +1,4 @@
-const User = require("./user");
+const User = require("../src/user");
 const axios = require("axios");
 const chai = require("chai");
 const sinon = require("sinon");
